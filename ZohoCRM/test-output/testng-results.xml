@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-03T17:46:50 IST" name="Default suite" finished-at="2025-09-03T17:50:11 IST" duration-ms="200709">
+    <groups>
+    </groups>
+    <test started-at="2025-09-03T17:46:50 IST" name="Default test" finished-at="2025-09-03T17:50:11 IST" duration-ms="200709">
+      <class name="com.zoho.testscript.CampaignModule">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.zoho.testscript.CampaignModule@22fcf7ab]" started-at="2025-09-03T17:46:50 IST" name="openBrowser" finished-at="2025-09-03T17:47:29 IST" duration-ms="38067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method is-config="true" signature="zohoLogin()[pri:0, instance:com.zoho.testscript.CampaignModule@22fcf7ab]" started-at="2025-09-03T17:47:29 IST" name="zohoLogin" finished-at="2025-09-03T17:48:29 IST" duration-ms="59579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zohoLogin -->
+        <test-method signature="testCampaignModule()[pri:0, instance:com.zoho.testscript.CampaignModule@22fcf7ab]" started-at="2025-09-03T17:48:29 IST" name="testCampaignModule" finished-at="2025-09-03T17:50:09 IST" duration-ms="100026" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCampaignModule -->
+        <test-method is-config="true" signature="zohoLogout()[pri:0, instance:com.zoho.testscript.CampaignModule@22fcf7ab]" started-at="2025-09-03T17:50:09 IST" name="zohoLogout" finished-at="2025-09-03T17:50:10 IST" duration-ms="1252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zohoLogout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.zoho.testscript.CampaignModule@22fcf7ab]" started-at="2025-09-03T17:50:10 IST" name="closeBrowser" finished-at="2025-09-03T17:50:11 IST" duration-ms="743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.zoho.testscript.CampaignModule -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

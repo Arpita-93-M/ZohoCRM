@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
@@ -17,20 +18,19 @@ public class Filelib {
 		String data = p.getProperty(key);
 		return data;
 	}
-  public String getExcelData(String sheetnName,int row,int cell ) throws EncryptedDocumentException, IOException {
+  public String getExcelData(String sheetnName,int row,int cell ) throws EncryptedDocumentException, IOException, org.apache.commons.compress.archivers.dump.InvalidFormatException{
   FileInputStream fis=new FileInputStream("./data/CustomerDetail.xlsx");
   Workbook wb = WorkbookFactory.create(fis);
   String data = wb.getSheet(sheetnName).getRow(row).getCell(cell).getStringCellValue();
   return data;
+  
  }
- public void setExcelData(String sheetnName,int row,int cell,String data) throws EncryptedDocumentException, IOException {
+ public void setExcelData(String sheetnName,int row,int cell,String data) throws EncryptedDocumentException, IOException, InvalidFormatException {
 	FileInputStream fis=new FileInputStream("./data/CustomerDetail.xlsx");
 	Workbook wb = WorkbookFactory.create(fis);
 	wb.getSheet(sheetnName).getRow(row).getCell(cell).setCellValue(data);
 	FileOutputStream fos=new FileOutputStream("./data/CustomerDetail.xlsx");
 	wb.write(fos);
-	
-	
-	
+		
  }
 }

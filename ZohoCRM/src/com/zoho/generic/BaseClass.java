@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,7 +21,7 @@ public class BaseClass{
     
 
     @BeforeTest
-    public void openBrowser() throws IOException, InterruptedException {
+    public void openBrowser() throws IOException, InterruptedException, InvalidFormatException {
     	ChromeOptions options=new ChromeOptions();
         options.addArguments("--incognito");
         driver=new ChromeDriver(options);
@@ -34,7 +35,7 @@ public class BaseClass{
     
    
     @BeforeMethod
-    public void zohoLogin() throws IOException, AWTException, InterruptedException {
+    public void zohoLogin() throws IOException, AWTException, InterruptedException, InvalidFormatException {
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     Filelib li = new Filelib();
     String un = li.getPropertyData("un");

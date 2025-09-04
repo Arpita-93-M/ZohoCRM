@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class Filelib {
-	public String getPropertyData(String key) throws IOException {
+	public String getPropertyData(String key) throws IOException, InvalidFormatException{
 		FileInputStream fis=new FileInputStream("./data/commonData.property");
 		Properties p=new Properties();
 		p.load(fis);
